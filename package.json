@@ -4,7 +4,8 @@
   "description": "app to track cohort 3 students",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/erikwlarsen/student-app/issues"
   },
-  "homepage": "https://github.com/erikwlarsen/student-app#readme"
+  "homepage": "https://github.com/erikwlarsen/student-app#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.15",
+    "nodemon": "^1.17.3"
+  }
 }
