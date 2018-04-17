@@ -1,3 +1,4 @@
 const mongoose = require('mongoose')
+const studentModel = require('./StudentModel')
 
-mongoose.connect('mongodb://user:password>@ds147589.mlab.com:47589/lindasstudents')
+
