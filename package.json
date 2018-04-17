@@ -1,0 +1,19 @@
+{
+  "name": "student-app",
+  "version": "1.0.0",
+  "description": "app to track cohort 3 students",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erikwlarsen/student-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erikwlarsen/student-app/issues"
+  },
+  "homepage": "https://github.com/erikwlarsen/student-app#readme"
+}
