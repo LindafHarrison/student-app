@@ -3,6 +3,7 @@ const app = express()
 const path = require('path')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
+const studentController = require('./db/studentController')
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}))
@@ -15,8 +16,6 @@ app.get("/", (req,res) => {
     res.sendFile(path.join(__dirname, 'index.html'))
 })
 
-app.post('/addStudent', (req, res) => {
-    res.send(req.body)
-})
+app.post('/addStudent', studentController.createStudent)
 
 app.listen(3000, () => {console.log("listening on port 3000")})
