@@ -9,10 +9,10 @@ const studentController = {
             name: req.body.name,
             age: req.body.age
         },
-            function (err, student) {
-                if (err) res.status(418).send(err)
-                else res.json(student);
-            })
+        function (err, student) {
+            if (err) {res.status(418).send(err)}
+            else {res.json(student)};
+        })
     }, 
 
     findStudent: (req, res, next) => {
@@ -27,9 +27,9 @@ const studentController = {
 
     updateStudent: (req, res, next) => {
         studentModel.findOneAndUpdate({
-            name: req.params.name,
+            _id: req.body._id,
         },{
-            age: req.params.age,
+            age: req.body.age,
         },
         function (err, student) {
             if (err) res.status(404).send(err)
@@ -43,7 +43,16 @@ const studentController = {
             if (err) res.status(404).send(err)
             else res.json(students)
         })
-    }
+    },
+
+    deleteStudent: (req, res, next) => {
+        studentModel.findOneAndRemove({
+            _id: req.body._id
+        }, (err, student) => {
+            if (err) {res.status(404).send(err)}
+            else {res.json(student)}
+        }
+    )}
 }
 
 module.exports = studentController

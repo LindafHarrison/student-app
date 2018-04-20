@@ -26,6 +26,8 @@ app.post('/addStudent', studentController.createStudent)
 
 app.get('/findStudent/:name', studentController.findStudent)
 
-app.patch('/updateStudent/:name/:age', studentController.updateStudent)
+app.patch('/updateStudent', studentController.updateStudent)
+
+app.delete('/deleteStudent', studentController.deleteStudent)
 
 app.listen(3000, () => {console.log("listening on port 3000")})
